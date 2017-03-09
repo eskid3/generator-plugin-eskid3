@@ -3,17 +3,17 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-plugin-kibana-eskidtres using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-plugin-kibana-eskide3 using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-plugin-kibana-eskidtres
+npm install -g generator-plugin-kibana-eskide3
 ```
 
 Then generate your new project:
 
 ```bash
-yo plugin-kibana-eskidtres
+yo plugin-kibana-eskide3
 ```
 
 ## Getting To Know Yeoman
@@ -28,11 +28,11 @@ yo plugin-kibana-eskidtres
 Apache-2.0 © [Tomas Muñoz Testón]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-plugin-kibana-eskidtres.svg
-[npm-url]: https://npmjs.org/package/generator-plugin-kibana-eskidtres
-[travis-image]: https://travis-ci.org/tomas-teston/generator-plugin-kibana-eskidtres.svg?branch=master
-[travis-url]: https://travis-ci.org/tomas-teston/generator-plugin-kibana-eskidtres
-[daviddm-image]: https://david-dm.org/tomas-teston/generator-plugin-kibana-eskidtres.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/tomas-teston/generator-plugin-kibana-eskidtres
-[coveralls-image]: https://coveralls.io/repos/tomas-teston/generator-plugin-kibana-eskidtres/badge.svg
-[coveralls-url]: https://coveralls.io/r/tomas-teston/generator-plugin-kibana-eskidtres
+[npm-image]: https://badge.fury.io/js/generator-plugin-kibana-eskide3.svg
+[npm-url]: https://npmjs.org/package/generator-plugin-kibana-eskide3
+[travis-image]: https://travis-ci.org/tomas-teston/generator-plugin-kibana-eskide3.svg?branch=master
+[travis-url]: https://travis-ci.org/tomas-teston/generator-plugin-kibana-eskide3
+[daviddm-image]: https://david-dm.org/tomas-teston/generator-plugin-kibana-eskide3.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/tomas-teston/generator-plugin-kibana-eskide3
+[coveralls-image]: https://coveralls.io/repos/tomas-teston/generator-plugin-kibana-eskide3/badge.svg
+[coveralls-url]: https://coveralls.io/r/tomas-teston/generator-plugin-kibana-eskide3
