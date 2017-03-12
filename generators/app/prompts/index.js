@@ -31,7 +31,7 @@ module.exports = function(){
     var done = this.async();
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the sublime ' + chalk.red('generator-plugin-kibana-eskidtres') + ' generator!'
+      'Welcome to the sublime ' + chalk.red('generator-plugin-kibana-eskid3') + ' generator!'
     ));
 
 

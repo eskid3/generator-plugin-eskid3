@@ -4,7 +4,7 @@ const resolve = require('path').resolve;
 const README_URL = 'https://github.com/elastic/generator-kibana-plugin#getting-started';
 const KIBANA_DIR = resolve(process.cwd(), '../kibana');
 
-function checkForKibana(log, kibanaOk) {
+checkForKibana = function(log) {
   // verify that the kibana repository has been setup correctly
   try {
     const stat = statSync(KIBANA_DIR);
@@ -12,6 +12,10 @@ function checkForKibana(log, kibanaOk) {
       const err = new Error('not a directory');
       err.code = 'ENOENT';
       throw err;
+      return false;
+    }
+    else {
+      return true;
     }
   } catch (err) {
     if (err.code === 'ENOENT') {
@@ -19,6 +23,7 @@ function checkForKibana(log, kibanaOk) {
       .error('Missing Kibana Development Environment')
       .info('Expected location:', KIBANA_DIR)
       .info('See', README_URL);
+      return false;
       process.exit(1);
     }
 

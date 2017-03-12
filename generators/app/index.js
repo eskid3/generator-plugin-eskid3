@@ -18,16 +18,8 @@ module.exports = Generator.extend({
 
   // Check environment
   initializing: function (){
-    var done = this.async();
-    myFunctions.checkForKibana(this.log);
+    this.kibanaOk = myFunctions.checkForKibana(this.log);
     myFunctions.checkNodeVersion(this.log);
-    console.log("descargando Kibana . . .");
-    var cloneRepository = NodeGit.Clone(cloneURL, localPath, cloneOptions).then(function(repository) {
-      // Work with the repository object here.
-      console.log("Hola que aseeee");
-      done();
-    })
-    .catch(function(err) { console.error(err); });
     //myFunctions.checkJavaversion(this.log);
   },
 
@@ -42,8 +34,35 @@ module.exports = Generator.extend({
     writes.app.apply(this);
   },
 
+  conflicts: function() {
+    /*console.log("Downloading Kibana . . .");
+    var done = this.async();
+    var cloneRepository = NodeGit.Clone(cloneURL, localPath, cloneOptions).then(function(repository) {
+      // Work with the repository object here.
+      console.log("Hola que aseeee");
+      done();
+    })
+    .catch(function(err) { console.error(err); });*/
+    console.log("Valor de kibanaOk: " + this.kibanaOk);
+    if (this.kibanaOk !== undefined) {
+      const done = this.async();
+      this.prompt({
+        type: 'list',
+        name: 'kbnOk',
+        message: 'Install kibana?',
+        choices: ['yes', 'no']
+      }, function (answers) {
+        console.log("Valor:" + answers);
+        done();
+        //this.kbnVersion = answers.kbn === 'si' ? 'si' : answers.kbnVersion;
+      }.bind(this));
+    } else {
+      console.log("Error en variable kibana");
+    }
+  }
+
   // Install dependencies
-  install: function () {
+  /*install: function () {
     this.installDependencies({
       bower: false,
       npm: true,
@@ -54,5 +73,5 @@ module.exports = Generator.extend({
     //this.installDependencies();
     //this.npmInstall();
     //this.runInstall('bower');
-  }
+  }*/
 });
