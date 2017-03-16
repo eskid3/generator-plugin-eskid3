@@ -34,6 +34,9 @@ module.exports = function(){
       'Welcome to the sublime ' + chalk.red('generator-plugin-kibana-eskid3') + ' generator!'
     ));
 
+    if(this.kibanaOk) {
+      prompts = require('./prompts_2');
+    }
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.someAnswer;
@@ -42,6 +45,8 @@ module.exports = function(){
       this.props.projectName = generateProjectName(props.projectName);
       this.props.projectDescription = this.props.projectDescription ||
                                     this.props.projectName.original;
+
+      this.props.instkbn = this.props.generateApp;
 
       done();
     }.bind(this));

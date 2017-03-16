@@ -1,0 +1,27 @@
+[
+  {
+    "type": "input",
+    "name": "projectName",
+    "message": "What is your project name?",
+    "default": "My App"
+  },
+  {
+    "type": "input",
+    "name": "projectDescription",
+    "message": "Insert your project description (Optional)",
+    "default": null
+  },
+  {
+    "type": "input",
+    "name": "username",
+    "message": "What is your Github Username? (Optional)",
+    "default": null
+  },
+  {
+    "type": "confirm",
+    "name": "generateApp",
+    "message": "Do you want to install Kibana?",
+    "default": ""  
+  }
+  
+]

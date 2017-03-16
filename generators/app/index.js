@@ -5,22 +5,23 @@ var yosay = require('yosay');
 
 var NodeGit = require("nodegit");
 var cloneURL = "https://github.com/tomas-teston/generator-kibana-plugin";
-var localPath = require("path").join(__dirname, "tmp");
+var resolve = require("path").resolve;
+var localPath = resolve(process.cwd(), '../Kibana');
 var cloneOptions = {};
 
 var myFunctions = require('./env');
 var prompts = require('./prompts');
 var writes = require('./writes');
 
-var kibanaOk = undefined;
+var kibanaOk = false;
 
 module.exports = Generator.extend({
 
   // Check environment
   initializing: function (){
-    this.kibanaOk = myFunctions.checkForKibana(this.log);
-    myFunctions.checkNodeVersion(this.log);
-    //myFunctions.checkJavaversion(this.log);
+    var done_mio = this.async();
+    this.kibanaOk = myFunctions.checkEnviroment(this.log);
+    done_mio();
   },
 
   // Ask the user
@@ -34,30 +35,16 @@ module.exports = Generator.extend({
     writes.app.apply(this);
   },
 
-  conflicts: function() {
-    /*console.log("Downloading Kibana . . .");
-    var done = this.async();
-    var cloneRepository = NodeGit.Clone(cloneURL, localPath, cloneOptions).then(function(repository) {
-      // Work with the repository object here.
-      console.log("Hola que aseeee");
-      done();
-    })
-    .catch(function(err) { console.error(err); });*/
-    console.log("Valor de kibanaOk: " + this.kibanaOk);
-    if (this.kibanaOk !== undefined) {
-      const done = this.async();
-      this.prompt({
-        type: 'list',
-        name: 'kbnOk',
-        message: 'Install kibana?',
-        choices: ['yes', 'no']
-      }, function (answers) {
-        console.log("Valor:" + answers);
+  install: function() {
+    if (this.props.instkbn === true) {
+      var done = this.async();
+      console.log("descargando Kibana . . .");
+      var cloneRepository = NodeGit.Clone(cloneURL, localPath, cloneOptions).then(function(repository) {
+        // Work with the repository object here.
+        console.log("Exito!.Everything is ready");
         done();
-        //this.kbnVersion = answers.kbn === 'si' ? 'si' : answers.kbnVersion;
-      }.bind(this));
-    } else {
-      console.log("Error en variable kibana");
+      })
+      .catch(function(err) { console.error(err); });
     }
   }
 
