@@ -5,8 +5,6 @@
 
 Este proyecto creado con Yeoman permite generar una estructura principal de un plugin de visualización con D3JS para Kibana.
 
-[ME QUEDA POR DESCRIBIR]
-
 ## Instalación
 
 Primero se instala [Yeoman](http://yeoman.io) y el generator-plugin-kibana-eskide3 usando [npm](https://www.npmjs.com/) (Se asume que se ha instalado previamente [node.js](https://nodejs.org/)).
@@ -25,7 +23,7 @@ yo plugin-kibana-eskide3
 ```
 ## License
 
-Apache-2.0 © [Tomas Muñoz Testón]()
+Apache-2.0 © [Tomas Muñoz Testón]()
 
 
 [npm-image]: https://badge.fury.io/js/generator-plugin-kibana-eskide3.svg
