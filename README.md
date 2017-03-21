@@ -3,6 +3,8 @@
 
 ## Introducción
 
+Este proyecto creado con Yeoman permite generar una estructura principal de un plugin de visualización con D3JS para Kibana.
+
 [ME QUEDA POR DESCRIBIR]
 
 ## Instalación
