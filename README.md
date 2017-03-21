@@ -1,7 +1,11 @@
 # generator-plugin-kibana-eskide3
 > Generador de plugin de tipo visualización para Kibana con D3JS
 
-## Installation
+## Introducción
+
+[ME QUEDA POR DESCRIBIR]
+
+## Instalación
 
 Primero se instala [Yeoman](http://yeoman.io) y el generator-plugin-kibana-eskide3 usando [npm](https://www.npmjs.com/) (Se asume que se ha instalado previamente [node.js](https://nodejs.org/)).
 
