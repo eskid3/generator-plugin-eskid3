@@ -1,4 +1,4 @@
-# generator-plugin-kibana-eskide3 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-plugin-kibana-eskide3
 > Generador de plugin de tipo visualización para Kibana con D3JS
 
 ## Installation
