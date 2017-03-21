@@ -3,16 +3,14 @@
 
 ## Installation
 
-Antes de instalar 
-
-Primero instala [Yeoman](http://yeoman.io) y el generator-plugin-kibana-eskide3 usando [npm](https://www.npmjs.com/) (Se asume que se ha instalado previamente [node.js](https://nodejs.org/)).
+Primero se instala [Yeoman](http://yeoman.io) y el generator-plugin-kibana-eskide3 usando [npm](https://www.npmjs.com/) (Se asume que se ha instalado previamente [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
 npm install -g generator-plugin-kibana-eskide3
 ```
 
-A continuación, creamos una nueva carpeta, nos posicionamos en ella y lanzamos el generador.
+A continuación, crear una nueva carpeta, nos posicionamos en ella y lanzamos el generador.
 
 ```bash
 mkdir my-plugin
