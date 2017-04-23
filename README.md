@@ -23,7 +23,7 @@ yo plugin-kibana-eskide3
 ```
 ## License
 
-GNU © [Tomas Muñoz Testón]()
+GNU General Public License v3.0 © [Tomas Muñoz Testón]()
 
 
 [npm-image]: https://badge.fury.io/js/generator-plugin-kibana-eskide3.svg
